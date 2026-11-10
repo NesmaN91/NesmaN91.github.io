@@ -3,10 +3,14 @@
 Upload pictures here with these exact file names (lowercase, .jpg). A photo appears on the site as soon as its file is here; empty spaces stay hidden.
 
 - `keynote-2024-1.jpg`: Home carousel (also on Highlights); Highlights: Student keynote speaker, 2024 Internationally Connected Faculty Reception
+- `teaching-nau-1.jpg`: Home carousel (also on Highlights); Teaching page; Highlights: Teaching at Northern Arizona University
 - `outstanding-phd-2025-1.jpg`: Home carousel (also on Highlights); Highlights: Outstanding Doctoral Student, Curriculum and Instruction
 - `aect-led-award-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AECT Learner Engagement Division professional development award; Highlights: AECT 2026
 - `aera-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AERA 2026; Highlights: AERA Graduate Student Council
+- `aect-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2026
 - `aera-gsc-1.jpg`: Home carousel (also on Highlights); Highlights: AERA Graduate Student Council
+- `teaching-nau-2.jpg`: Home carousel (also on Highlights); Teaching page; Highlights: Teaching at Northern Arizona University
+- `aztesol-board-1.jpg`: Home carousel (also on Highlights); Highlights: Member at Large, AZTESOL Board
 - `ignite-2026-1.jpg`: Home carousel (also on Highlights); Research: grants (IGNITE-STEM); Highlights: IGNITE-STEM co-design workshop
 - `aect-2025-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2025
 - `teachers-loop-2025-1.jpg`: Home carousel (also on Highlights); Research: professional learning; Highlights: Teachers in the Loop series
@@ -26,8 +30,9 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `aera-award-2026-3.jpg`: Highlights: AERA Instructional Technology SIG award
 - `strohbehn-2025-1.jpg`: Highlights: AECT Earl F. Strohbehn Intern
 - `strohbehn-2025-2.jpg`: Highlights: AECT Earl F. Strohbehn Intern
-- `scholarships-2026-1.jpg`: Highlights: Phi Kappa Phi and Phi Delta Kappa scholarships
-- `scholarships-2026-2.jpg`: Highlights: Phi Kappa Phi and Phi Delta Kappa scholarships
+- `scholarships-2026-1.jpg`: Highlights: Phi Kappa Phi, Phi Delta Kappa, and Jerry Petersen scholarships
+- `scholarships-2026-2.jpg`: Highlights: Phi Kappa Phi, Phi Delta Kappa, and Jerry Petersen scholarships
+- `scholarships-2026-3.jpg`: Highlights: Phi Kappa Phi, Phi Delta Kappa, and Jerry Petersen scholarships
 - `aera-2026-2.jpg`: Highlights: AERA 2026
 - `aera-2026-3.jpg`: Highlights: AERA 2026
 - `aera-2025-2.jpg`: Highlights: AERA 2025
@@ -35,7 +40,6 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `aera-2024-2.jpg`: Highlights: AERA 2024
 - `aera-2024-3.jpg`: Highlights: AERA 2024
 - `aera-gsc-2.jpg`: Highlights: AERA Graduate Student Council
-- `aect-2026-1.jpg`: Highlights: AECT 2026
 - `aect-2026-2.jpg`: Highlights: AECT 2026
 - `aect-2026-3.jpg`: Highlights: AECT 2026
 - `aect-2025-2.jpg`: Highlights: AECT 2025
@@ -48,6 +52,7 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `ignite-dev-1.jpg`: Highlights: Co-PI, IGNITE-STEM development proposal
 - `ignite-dev-2.jpg`: Highlights: Co-PI, IGNITE-STEM development proposal
 - `stem-k12-1.jpg`: Highlights: AI-Enhanced Professional Learning for Informal STEM Education
+- `aztesol-board-2.jpg`: Highlights: Member at Large, AZTESOL Board
 - `aiitec-1.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
 - `aiitec-2.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
 - `aztesol-2025-1.jpg`: Highlights: AZTESOL virtual professional development
@@ -55,6 +60,4 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `basis-2025-1.jpg`: Highlights: Think Like a Scientist, BASIS Flagstaff
 - `lapan-1.jpg`: Highlights: Lapan Forum, NAU College of Education
 - `lapan-2.jpg`: Highlights: Lapan Forum, NAU College of Education
-- `teaching-nau-1.jpg`: Highlights: Teaching at Northern Arizona University
-- `teaching-nau-2.jpg`: Highlights: Teaching at Northern Arizona University
 - `teaching-nau-3.jpg`: Highlights: Teaching at Northern Arizona University

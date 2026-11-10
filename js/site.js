@@ -33,8 +33,9 @@
   function watch(img, box) {
     box.dataset.file = img.getAttribute("src");
     const ok = () => {
-      const r = img.naturalWidth / img.naturalHeight; // tall photos show as 3:4, near-square ones as 1:1
-      box.classList.toggle("portrait", r < 0.9); box.classList.toggle("square", r >= 0.9 && r < 1.2);
+      // Shape: tall photos show as 3:4, near-square as 1:1, wide group shots uncropped; --r is the photo's own ratio.
+      const r = img.naturalWidth / img.naturalHeight; box.style.setProperty("--r", r.toFixed(3));
+      box.classList.toggle("portrait", r < 0.9); box.classList.toggle("square", r >= 0.9 && r < 1.2); box.classList.toggle("wide", r > 1.45);
       box.classList.add("loaded"); box.classList.remove("missing"); box.dispatchEvent(new CustomEvent("photo:loaded", { bubbles: true })); };
     const bad = () => { box.classList.add("missing"); };
     if (img.complete && img.naturalWidth > 0) ok();

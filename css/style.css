@@ -237,6 +237,7 @@ svg .step { cursor: pointer; }
 .photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); background: var(--teal-soft); }
 .photo.portrait img { aspect-ratio: 3 / 4; }
 .photo.square img { aspect-ratio: 1 / 1; }
+.photo.wide img { aspect-ratio: var(--r); }
 .photo:not(.loaded) { height: 1px; overflow: hidden; }
 .photo.missing { display: none; }
 .photo.loaded { cursor: zoom-in; }
@@ -259,8 +260,11 @@ svg .step { cursor: pointer; }
 .show-slots .strip-section[hidden] { display: block; }
 .strip { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 12px; scrollbar-width: thin; }
 .strip .photo { flex: 0 0 min(300px, 78%); scroll-snap-align: start; }
-.strip .photo.portrait { flex-basis: min(169px, 44%); } /* same height as a 4:3 photo */
-.strip .photo.square { flex-basis: min(225px, 58%); }
+/* In the carousel every photo keeps its own shape at the same height. */
+.strip { --h: 225px; }
+.strip .photo.loaded { flex: 0 0 auto; width: calc(var(--h) * var(--r, 1.333)); max-width: 88%; }
+.strip .photo.loaded img { aspect-ratio: var(--r, 4 / 3); }
+@media (max-width: 600px) { .strip { --h: 190px; } }
 .strip .photo:not(.loaded):not(.missing) { flex-basis: 1px; }
 .strip-controls { display: flex; gap: 8px; align-items: center; margin-top: 4px; }
 .strip-controls button { font: inherit; font-size: 0.92rem; background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
@@ -274,6 +278,7 @@ svg .step { cursor: pointer; }
 .moment[hidden] { display: none; }
 .moment.fade-in { animation: rise .45s var(--ease) both; }
 .moment time { color: var(--muted); font-size: 0.92rem; }
+.moment-photos .photo figcaption { font-size: 0.82rem; }
 .moment h3 { margin: 2px 0 6px; }
 .moment p { margin-bottom: 0.6em; }
 .moment .links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.95rem; margin: 0; }
