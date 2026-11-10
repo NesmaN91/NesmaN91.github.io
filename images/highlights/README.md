@@ -59,5 +59,5 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `pedaigogy-2026-1.jpg`: Highlights: Reimagining PedAIgogy Incubator Series
 - `basis-2025-1.jpg`: Highlights: Think Like a Scientist, BASIS Flagstaff
 - `lapan-1.jpg`: Highlights: AERA Graduate Students Council meeting with the AERA leaders 
-- `lapan-2.jpg`: Highlights: Lapan Forum, NAU College of Education
+- `lapan-2.jpg`: Highlights: AERA Graduate Students Council meeting with the AERA leaders 
 - `teaching-nau-3.jpg`: Highlights: Teaching at Northern Arizona University
