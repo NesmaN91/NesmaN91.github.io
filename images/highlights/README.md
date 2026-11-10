@@ -40,6 +40,7 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `aera-2024-2.jpg`: Highlights: AERA 2024
 - `aera-2024-3.jpg`: Highlights: AERA 2024
 - `aera-gsc-2.jpg`: Highlights: AERA Graduate Student Council
+- `aera-gsc-3.jpg`: Highlights: AERA Graduate Student Council
 - `aect-2026-2.jpg`: Highlights: AECT 2026
 - `aect-2026-3.jpg`: Highlights: AECT 2026
 - `aect-2025-2.jpg`: Highlights: AECT 2025
@@ -58,6 +59,6 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `aztesol-2025-1.jpg`: Highlights: AZTESOL virtual professional development
 - `pedaigogy-2026-1.jpg`: Highlights: Reimagining PedAIgogy Incubator Series
 - `basis-2025-1.jpg`: Highlights: Think Like a Scientist, BASIS Flagstaff
-- `lapan-1.jpg`: Highlights: AERA Graduate Students Council meeting with the AERA leaders 
-- `lapan-2.jpg`: Highlights: AERA Graduate Students Council meeting with the AERA leaders 
+- `lapan-1.jpg`: Highlights: Lapan Forum, NAU College of Education
+- `lapan-2.jpg`: Highlights: Lapan Forum, NAU College of Education
 - `teaching-nau-3.jpg`: Highlights: Teaching at Northern Arizona University

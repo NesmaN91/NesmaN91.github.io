@@ -109,8 +109,8 @@ Dashed boxes show the file name each space expects.
 | `images/highlights/aztesol-2025-1.jpg` | Highlights: AZTESOL virtual professional development |
 | `images/highlights/pedaigogy-2026-1.jpg` | Highlights: Reimagining PedAIgogy Incubator Series |
 | `images/highlights/basis-2025-1.jpg` | Highlights: Think Like a Scientist, BASIS Flagstaff |
-| `images/highlights/lapan-1.jpg` | Highlights: AERA Graduate Students Council meeting with the AERA leaders  |
-| `images/highlights/lapan-2.jpg` | Highlights: AERA Graduate Students Council meeting with the AERA leaders  |
+| `images/highlights/lapan-1.jpg` | Highlights: Lapan Forum, NAU College of Education |
+| `images/highlights/lapan-2.jpg` | Highlights: Lapan Forum, NAU College of Education |
 | `images/highlights/teaching-nau-1.jpg` | Highlights: Teaching at Northern Arizona University |
 | `images/highlights/teaching-nau-2.jpg` | Highlights: Teaching at Northern Arizona University |
 | `images/highlights/teaching-nau-3.jpg` | Highlights: Teaching at Northern Arizona University |
