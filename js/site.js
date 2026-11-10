@@ -32,7 +32,10 @@
   // ---- Photos: show only the ones that exist ----
   function watch(img, box) {
     box.dataset.file = img.getAttribute("src");
-    const ok = () => { box.classList.add("loaded"); box.classList.remove("missing"); box.dispatchEvent(new CustomEvent("photo:loaded", { bubbles: true })); };
+    const ok = () => {
+      const r = img.naturalWidth / img.naturalHeight; // tall photos show as 3:4, near-square ones as 1:1
+      box.classList.toggle("portrait", r < 0.9); box.classList.toggle("square", r >= 0.9 && r < 1.2);
+      box.classList.add("loaded"); box.classList.remove("missing"); box.dispatchEvent(new CustomEvent("photo:loaded", { bubbles: true })); };
     const bad = () => { box.classList.add("missing"); };
     if (img.complete && img.naturalWidth > 0) ok();
     else if (img.complete) bad();
@@ -90,12 +93,15 @@
     const strip = stripSection.querySelector(".strip");
     let timer = null, paused = false;
     const loaded = () => strip.querySelectorAll(".photo.loaded");
-    const stepSize = () => { const f = loaded()[0]; return f ? f.getBoundingClientRect().width + 14 : 300; };
+    // Photos can differ in width (portrait vs landscape), so step to the next photo's left edge.
+    const offsets = () => { const base = strip.getBoundingClientRect().left; return [...loaded()].map((f) => f.getBoundingClientRect().left - base); };
+    const go = (left) => strip.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
     const next = () => {
-      if (strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4) strip.scrollTo({ left: 0, behavior: reduce ? "auto" : "smooth" });
-      else strip.scrollBy({ left: stepSize(), behavior: reduce ? "auto" : "smooth" });
+      const o = offsets().find((x) => x > 4);
+      if (o === undefined || strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4) go(0);
+      else go(strip.scrollLeft + o);
     };
-    const prev = () => strip.scrollBy({ left: -stepSize(), behavior: reduce ? "auto" : "smooth" });
+    const prev = () => { const o = offsets().filter((x) => x < -4).pop(); go(o === undefined ? 0 : strip.scrollLeft + o); };
     const start = () => { if (!reduce && !timer && loaded().length > 1) timer = setInterval(() => { if (!paused) next(); }, 4500); };
     stripSection.addEventListener("photo:loaded", () => { stripSection.hidden = false; start(); });
     if (strip.querySelector(".photo.loaded")) { stripSection.hidden = false; start(); }
