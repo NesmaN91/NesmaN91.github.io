@@ -108,16 +108,18 @@
 
   // ---- Lightbox: click any photo to enlarge ----
   let lastFocus = null;
-  function openLightbox(img) {
+  function openLightboxFor(img) {
+    const cap = img.closest(".photo").querySelector("figcaption");
+    openLightbox(img.currentSrc || img.src, img.alt, cap ? cap.textContent : img.alt);
+  }
+  function openLightbox(src, alt, caption) {
     lastFocus = document.activeElement;
-    const box = img.closest(".photo");
-    const cap = box.querySelector("figcaption");
     const lb = document.createElement("div");
     lb.className = "lightbox"; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-modal", "true"); lb.setAttribute("aria-label", "Enlarged photo");
     lb.innerHTML = '<button class="close" type="button">Close</button><figure><img alt=""><figcaption></figcaption></figure>';
-    lb.querySelector("img").src = img.currentSrc || img.src;
-    lb.querySelector("img").alt = img.alt;
-    lb.querySelector("figcaption").textContent = cap ? cap.textContent : img.alt;
+    lb.querySelector("img").src = src;
+    lb.querySelector("img").alt = alt;
+    lb.querySelector("figcaption").textContent = caption;
     document.body.appendChild(lb);
     requestAnimationFrame(() => lb.classList.add("open"));
     const close = () => { lb.classList.remove("open"); setTimeout(() => lb.remove(), 250); document.removeEventListener("keydown", onKey); if (lastFocus) lastFocus.focus(); };
@@ -128,11 +130,86 @@
   }
   document.addEventListener("click", (e) => {
     const img = e.target.closest(".photo.loaded img");
-    if (img && !img.closest(".lightbox")) openLightbox(img);
+    if (img && !img.closest(".lightbox")) openLightboxFor(img);
+    const link = e.target.closest("a[data-lightbox]");
+    if (link) { e.preventDefault(); openLightbox(link.getAttribute("href"), link.dataset.caption || "", link.dataset.caption || ""); }
   });
   document.querySelectorAll(".photo img").forEach((img) => {
     img.setAttribute("tabindex", "0");
-    img.addEventListener("keydown", (e) => { if ((e.key === "Enter" || e.key === " ") && img.closest(".photo.loaded")) { e.preventDefault(); openLightbox(img); } });
+    img.addEventListener("keydown", (e) => { if ((e.key === "Enter" || e.key === " ") && img.closest(".photo.loaded")) { e.preventDefault(); openLightboxFor(img); } });
+  });
+
+  // ---- Animated models: play through steps, click a step to read it ----
+  document.querySelectorAll(".model").forEach((model) => {
+    const buttons = [...model.querySelectorAll(".model-steps button")];
+    const details = [...model.querySelectorAll(".model-detail article")];
+    const parts = [...model.querySelectorAll("svg [data-step]")];
+    const tracer = model.querySelector("[data-tracer]");
+    const timer = model.querySelector(".model-timer");
+    const bar = timer && timer.querySelector("span");
+    let i = 0, angle = null, visible = false, hovering = false, holdUntil = 0, holdTimer = null;
+
+    function setActive(n) {
+      i = (n + buttons.length) % buttons.length;
+      buttons.forEach((b, k) => { b.setAttribute("aria-selected", k === i ? "true" : "false"); b.tabIndex = k === i ? 0 : -1; });
+      details.forEach((d, k) => { d.hidden = k !== i; });
+      parts.forEach((p) => p.classList.toggle("is-active", Number(p.dataset.step) === i));
+      if (tracer) {
+        const node = model.querySelector(`svg [data-step="${i}"][data-angle]`);
+        const a = node ? Number(node.dataset.angle) : 0;
+        if (angle === null) angle = a; else angle += ((a - angle) % 360 + 360) % 360;
+        tracer.style.transform = `rotate(${angle}deg)`;
+      }
+    }
+    function restartTimer() {
+      if (!timer || reduce) return;
+      timer.classList.remove("run"); void timer.offsetWidth;
+      if (Date.now() >= holdUntil) timer.classList.add("run");
+    }
+    function updatePause() { model.classList.toggle("paused", !visible || hovering || Date.now() < holdUntil); }
+    function choose(n) {
+      setActive(n);
+      holdUntil = Date.now() + 12000; updatePause(); restartTimer();
+      clearTimeout(holdTimer);
+      holdTimer = setTimeout(() => { holdUntil = 0; updatePause(); restartTimer(); }, 12000);
+    }
+    buttons.forEach((b, k) => {
+      b.addEventListener("click", () => choose(k));
+      b.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); choose(i + 1); buttons[i].focus(); }
+        if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); choose(i - 1); buttons[i].focus(); }
+      });
+    });
+    parts.forEach((p) => p.addEventListener("click", () => choose(Number(p.dataset.step))));
+    if (bar) bar.addEventListener("animationend", () => { setActive(i + 1); restartTimer(); });
+    model.addEventListener("mouseenter", () => { hovering = true; updatePause(); });
+    model.addEventListener("mouseleave", () => { hovering = false; updatePause(); });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((entries) => entries.forEach((e) => {
+        visible = e.isIntersecting;
+        if (visible) model.classList.add("in-view");
+        updatePause();
+      }), { threshold: 0.35 }).observe(model);
+    } else { visible = true; model.classList.add("in-view"); }
+    setActive(0); updatePause(); restartTimer();
+  });
+
+  document.querySelectorAll(".fw-tabs").forEach((tabbar) => {
+    const tabs = [...tabbar.querySelectorAll('[role="tab"]')];
+    const show = (k) => {
+      tabs.forEach((t, j) => {
+        const on = j === k;
+        t.setAttribute("aria-selected", on ? "true" : "false"); t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+      });
+    };
+    tabs.forEach((t, k) => {
+      t.addEventListener("click", () => show(k));
+      t.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") { e.preventDefault(); const n = (k + 1) % tabs.length; show(n); tabs[n].focus(); }
+        if (e.key === "ArrowLeft") { e.preventDefault(); const n = (k - 1 + tabs.length) % tabs.length; show(n); tabs[n].focus(); }
+      });
+    });
   });
 
   // ---- Filters (publications and highlights pages) ----

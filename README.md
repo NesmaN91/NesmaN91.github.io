@@ -140,6 +140,19 @@ Each highlight has a line marked `<!-- To add a link -->` that shows where its l
 
 ---
 
+## The three animated models
+
+The home page opens with your three models, behind tabs:
+
+- the Human-in-the-Loop inquiry model (*Education Sciences*, 2025)
+- the PAEERA model (*Journal of Computers in Education*, 2026)
+- the FERPAI framework
+
+The Research page shows each model inside its research line. Each model plays through its steps; visitors can click any step, or a part of the diagram, to read it. Hovering over a model pauses it.
+
+- The wording for each step is in `index.html` and `research.html`. To change a step's text, edit it inside the matching `<article role="tabpanel">` block, in both files.
+- The original figures are in `images/frameworks/`, and visitors can open them with "View the original figure." To replace a figure, upload a new picture with the same file name.
+
 ## Motion
 
 The site includes:
