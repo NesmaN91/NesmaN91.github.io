@@ -1,0 +1,57 @@
+# Photos for the highlights folder
+
+Upload pictures here with these exact file names (lowercase, .jpg). A photo appears on the site as soon as its file is here; empty spaces stay hidden.
+
+- `keynote-2024-1.jpg`: Home carousel (also on Highlights); Highlights: Keynote address, International Faculty Reception
+- `outstanding-phd-2025-1.jpg`: Home carousel (also on Highlights); Highlights: Outstanding Doctoral Student, Curriculum and Instruction
+- `aera-award-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AERA Instructional Technology SIG award
+- `aera-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AERA 2026
+- `aect-2025-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2025
+- `ignite-2026-1.jpg`: Home carousel (also on Highlights); Research: grants (IGNITE-STEM); Highlights: IGNITE-STEM co-design workshop
+- `teachers-loop-2025-1.jpg`: Home carousel (also on Highlights); Research: professional learning; Highlights: Teachers in the Loop series
+- `aect-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2026
+- `aera-2025-1.jpg`: Home carousel (also on Highlights); Highlights: AERA 2025
+- `teachers-loop-2025-2.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
+- `teachers-loop-2025-3.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
+- `keynote-2024-2.jpg`: Highlights: Keynote address, International Faculty Reception
+- `keynote-2024-3.jpg`: Highlights: Keynote address, International Faculty Reception
+- `outstanding-phd-2025-2.jpg`: Highlights: Outstanding Doctoral Student, Curriculum and Instruction
+- `outstanding-phd-2025-3.jpg`: Highlights: Outstanding Doctoral Student, Curriculum and Instruction
+- `aera-award-2026-2.jpg`: Highlights: AERA Instructional Technology SIG award
+- `aera-award-2026-3.jpg`: Highlights: AERA Instructional Technology SIG award
+- `strohbehn-2025-1.jpg`: Highlights: AECT Earl F. Strohbehn Intern
+- `strohbehn-2025-2.jpg`: Highlights: AECT Earl F. Strohbehn Intern
+- `scholarships-2026-1.jpg`: Highlights: Phi Kappa Phi and Phi Delta Kappa scholarships
+- `scholarships-2026-2.jpg`: Highlights: Phi Kappa Phi and Phi Delta Kappa scholarships
+- `aera-2026-2.jpg`: Highlights: AERA 2026
+- `aera-2026-3.jpg`: Highlights: AERA 2026
+- `aera-2025-2.jpg`: Highlights: AERA 2025
+- `aera-2025-3.jpg`: Highlights: AERA 2025
+- `aera-2024-1.jpg`: Highlights: AERA 2024
+- `aera-2024-2.jpg`: Highlights: AERA 2024
+- `aera-2024-3.jpg`: Highlights: AERA 2024
+- `aera-gsc-1.jpg`: Highlights: AERA Graduate Student Council
+- `aect-2026-2.jpg`: Highlights: AECT 2026
+- `aect-2026-3.jpg`: Highlights: AECT 2026
+- `aect-2025-2.jpg`: Highlights: AECT 2025
+- `aect-2025-3.jpg`: Highlights: AECT 2025
+- `aect-2024-1.jpg`: Highlights: AECT 2024
+- `aect-2024-2.jpg`: Highlights: AECT 2024
+- `aect-2024-3.jpg`: Highlights: AECT 2024
+- `aect-2023-1.jpg`: Highlights: AECT 2023
+- `aect-2023-2.jpg`: Highlights: AECT 2023
+- `ignite-2026-2.jpg`: Highlights: IGNITE-STEM co-design workshop
+- `ignite-2026-3.jpg`: Highlights: IGNITE-STEM co-design workshop
+- `ignite-dev-1.jpg`: Highlights: Co-PI, IGNITE-STEM development proposal
+- `ignite-dev-2.jpg`: Highlights: Co-PI, IGNITE-STEM development proposal
+- `stem-k12-1.jpg`: Highlights: AI-Enhanced Professional Learning for Informal STEM Education
+- `aiitec-1.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
+- `aiitec-2.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
+- `aztesol-2025-1.jpg`: Highlights: AZTESOL virtual professional development
+- `pedaigogy-2026-1.jpg`: Highlights: Reimagining PedAIgogy Incubator Series
+- `basis-2025-1.jpg`: Highlights: Think Like a Scientist, BASIS Flagstaff
+- `lapan-1.jpg`: Highlights: Lapan Forum, NAU College of Education
+- `lapan-2.jpg`: Highlights: Lapan Forum, NAU College of Education
+- `teaching-nau-1.jpg`: Highlights: Teaching at Northern Arizona University
+- `teaching-nau-2.jpg`: Highlights: Teaching at Northern Arizona University
+- `teaching-nau-3.jpg`: Highlights: Teaching at Northern Arizona University
