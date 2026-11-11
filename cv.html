@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261110c">
+  <link rel="stylesheet" href="css/style.css?v=20261111a">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,10 @@
   <header class="site-header">
     <div class="wrap">
       <a class="site-name" href="index.html">Nesma R. Nasr</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-tools">
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -33,6 +36,7 @@
         </ul>
       </nav>
     </div>
+    <div class="progress" aria-hidden="true"></div>
   </header>
 
   <div class="shell">
@@ -58,17 +62,21 @@
       <!-- To update the CV: upload a new PDF named Nasr_Nesma_CV.pdf into the files folder. -->
       <p><a class="button" href="files/Nasr_Nesma_CV.pdf">Download CV (PDF)</a></p>
 
-      <section data-reveal>
-        <h2>Education</h2>
+            <p class="acc-tools"><button type="button" data-acc="open">Open all sections</button><button type="button" data-acc="close">Close all sections</button></p>
+<details class="acc" open data-reveal>
+        <summary><h2>Education</h2></summary>
+        <div class="acc-body">
         <ul class="plain">
           <li><strong>Ph.D., Curriculum and Instruction (Educational Technology focus),</strong> Northern Arizona University, expected May 2027</li>
           <li><strong>M.A., Curriculum and EFL Instruction,</strong> Zagazig University, Egypt, 2017</li>
           <li><strong>B.A., English Language,</strong> Faculty of Education, Zagazig University, Egypt, 2012</li>
         </ul>
-      </section>
+      </div>
+      </details>
 
-      <section data-reveal>
-        <h2>Selected honors</h2>
+      <details class="acc" open data-reveal>
+        <summary><h2>Selected honors</h2></summary>
+        <div class="acc-body">
         <ul class="plain">
           <li><a href="highlights.html#aect-led-award-2026">AECT Foundation Award for Graduate Student Professional Development</a>, AECT Learner Engagement Division, 2026</li>
           <li><a href="highlights.html#aera-award-2026">Best Proposal with a Graduate Student as First Author</a>, AERA Instructional Technology SIG, 2026</li>
@@ -77,20 +85,24 @@
           <li><a href="highlights.html#keynote-2024">Student keynote speaker</a>, NAU Internationally Connected Faculty Reception, 2024</li>
           <li>International Excellence Award, Northern Arizona University, 2021–2025</li>
         </ul>
-      </section>
+      </div>
+      </details>
 
-      <section data-reveal>
-        <h2>Funding</h2>
+      <details class="acc" data-reveal>
+        <summary><h2>Funding</h2></summary>
+        <div class="acc-body">
         <ul class="plain">
           <li>$46,193 in competitive scholarships and awards during doctoral study</li>
           <li>Project Technologist, <a href="research.html#grants">NSF FINDERS Foundry planning grant</a> ($49,613), 2026</li>
           <li>Co-PI, NSF FINDERS Foundry development proposal ($300,000), under review</li>
           <li>AI Technologist, NSF STEM K–12 subaward ($314,424), under review</li>
         </ul>
-      </section>
+      </div>
+      </details>
 
-      <section data-reveal>
-        <h2>Service</h2>
+      <details class="acc" data-reveal>
+        <summary><h2>Service</h2></summary>
+        <div class="acc-body">
         <ul class="plain">
           <li>Communication Officer, Learner Engagement Division, AECT</li>
           <li>Professional Development Committee Member, International Division, AECT</li>
@@ -98,16 +110,22 @@
           <li><a href="highlights.html#aztesol-board">Member at Large</a>, AZTESOL Board</li>
           <li>Reviewer, <em>Journal of Computers in Education</em> and <em>Education and Information Technologies</em></li>
         </ul>
-      </section>
+      </div>
+      </details>
     </main>
   </div>
 
   <footer class="site-footer">
+    <div class="footer-cta">
+      <p>Interested in collaborating, or in using one of my instruments?</p>
+      <button class="button" type="button" data-assistant-open>Work with me</button>
+    </div>
     <div class="wrap">
       <span>&copy; <span data-year>2026</span> Nesma R. Nasr</span>
       <span>Last updated November 2026</span>
     </div>
   </footer>
-  <script src="js/site.js?v=20261110c"></script>
+  <script src="js/site.js?v=20261111a"></script>
+  <script src="js/assistant.js?v=20261111a"></script>
 </body>
 </html>

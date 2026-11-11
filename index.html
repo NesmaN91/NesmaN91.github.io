@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261110c">
+  <link rel="stylesheet" href="css/style.css?v=20261111a">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,10 @@
   <header class="site-header">
     <div class="wrap">
       <a class="site-name" href="index.html">Nesma R. Nasr</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-tools">
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -33,6 +36,7 @@
         </ul>
       </nav>
     </div>
+    <div class="progress" aria-hidden="true"></div>
   </header>
 
   <div class="shell">
@@ -53,10 +57,21 @@
     </aside>
 
     <main class="content" id="main">
-      <section class="hero hero-text">
-        <h1>How do we keep human judgment in the loop when AI joins the classroom?</h1>
+      <section class="hero hero-text hero-pro">
+        <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="eyebrow">AI literacy · Learning design · Teacher education</p>
+        <h1>How do we keep <span class="sweep">human judgment in the loop</span> when AI joins the classroom?</h1>
         <p class="lede">I study how educators, trainers, and learners can work with generative AI without handing their judgment over to it.</p>
+        <p class="cta"><a class="button" href="research.html">Explore my research</a> <button class="button ghost" type="button" data-assistant-open>Work with me</button></p>
       </section>
+
+      <!-- ============ MOVING RIBBON ============ To change it, edit the TICKER list in the site builder, or edit both copies of the list here. -->
+      <div class="ticker" role="group" aria-label="Where my work appears">
+        <div class="ticker-track">
+          <ul><li>AERA</li><li>AECT</li><li>National Science Foundation</li><li>Education Sciences</li><li>Journal of Computers in Education</li><li>Journal of Applied Instructional Design</li><li>AZTESOL</li><li>Northern Arizona University</li></ul>
+          <ul aria-hidden="true"><li>AERA</li><li>AECT</li><li>National Science Foundation</li><li>Education Sciences</li><li>Journal of Computers in Education</li><li>Journal of Applied Instructional Design</li><li>AZTESOL</li><li>Northern Arizona University</li></ul>
+        </div>
+      </div>
 
       <section class="frameworks" aria-labelledby="fw-title">
         <h2 id="fw-title">Models from my research</h2>
@@ -276,17 +291,38 @@
         <p>My work sits where learning design, AI literacy, and teacher education meet. I design professional learning for teachers, build instruments that measure educators’ AI literacy, and teach online courses in which students feel seen and supported. I am trilingual, in Arabic, English, and French, and I treat the languages and cultures my students bring as assets for everyone’s learning.</p>
       </section>
 
+      <section class="services" id="work-with-me" data-reveal>
+        <h2>Work with me</h2>
+        <p>Select a topic to read more. Each one opens a short guided request that goes straight to my email.</p>
+        <details class="acc" name="services" open>
+          <summary><h3>Research collaboration</h3></summary>
+          <div class="acc-body"><p>I welcome co-authored studies, grant partnerships, and cross-institution projects on AI literacy, critical thinking with generative AI, professional learning design, and instrument validation.</p><button class="button" type="button" data-assistant-open="collab">Start a collaboration request</button></div>
+        </details>
+        <details class="acc" name="services">
+          <summary><h3>PICP Human-in-the-Loop survey</h3></summary>
+          <div class="acc-body"><p>The survey from my human-in-the-loop research, built on the Practical Inquiry model, looks at how learners ask, explore, check, and decide when they work with generative AI. Tell me about your study and I will reply by email.</p><button class="button" type="button" data-assistant-open="picp">Request the survey</button></div>
+        </details>
+        <details class="acc" name="services">
+          <summary><h3>FERPAI scale</h3></summary>
+          <div class="acc-body"><p>The Functional, Ethical, Rhetorical, and Pedagogical AI Literacy Scale for Educators measures four dimensions of educators’ AI literacy. Researchers and program leaders can request it for their own studies and needs assessments.</p><button class="button" type="button" data-assistant-open="ferpai">Request the FERPAI scale</button></div>
+        </details>
+        <details class="acc" name="services">
+          <summary><h3>Workshops and invited talks</h3></summary>
+          <div class="acc-body"><p>I lead AI literacy workshops and professional development for schools, universities, and organizations, including the Teachers in the Loop series.</p><button class="button" type="button" data-assistant-open="workshop">Invite me to speak</button></div>
+        </details>
+      </section>
+
       <h2 data-reveal>Research</h2>
       <p data-reveal>Three connected lines of work. Read more on the <a href="research.html">research page</a>.</p>
-      <div class="strand" data-reveal>
+      <div class="strand glow" data-reveal>
         <h3>Generative AI and critical thinking</h3>
         <p>How does GenAI shape the way learners question, check, and decide? My systematic review in the <em>Journal of Computers in Education</em> and my <em>Education Sciences</em> study, cited 171 times, examine this question in higher education; you can <a href="https://nesman91.github.io/GenAI-impact-on-Critical-Thinking-/">explore the study’s findings interactively</a>. Through IGNITE-STEM, an NSF-funded project on the Navajo Nation, I am bringing the question to K–12 STEM.</p>
       </div>
-      <div class="strand" data-reveal>
+      <div class="strand glow" data-reveal>
         <h3>Measuring AI literacy</h3>
         <p>I developed FERPAI, a scale that measures educators’ functional, ethical, rhetorical, and pedagogical AI literacy. An initial validation with 239 educators is complete; next come separate studies with preservice teachers, in-service teachers, and university faculty.</p>
       </div>
-      <div class="strand" data-reveal>
+      <div class="strand glow" data-reveal>
         <h3>Designing AI-enhanced professional learning</h3>
         <p>My dissertation designed and tested the <em>Teachers in the Loop</em> training: microlearning videos, narrated modules, and an avatar-based facilitator. More than 250 teachers, instructional designers, faculty members, and students have completed it.</p>
       </div>
@@ -340,11 +376,16 @@
   </div>
 
   <footer class="site-footer">
+    <div class="footer-cta">
+      <p>Interested in collaborating, or in using one of my instruments?</p>
+      <button class="button" type="button" data-assistant-open>Work with me</button>
+    </div>
     <div class="wrap">
       <span>&copy; <span data-year>2026</span> Nesma R. Nasr</span>
       <span>Last updated November 2026</span>
     </div>
   </footer>
-  <script src="js/site.js?v=20261110c"></script>
+  <script src="js/site.js?v=20261111a"></script>
+  <script src="js/assistant.js?v=20261111a"></script>
 </body>
 </html>

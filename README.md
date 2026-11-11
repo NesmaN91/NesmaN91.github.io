@@ -200,3 +200,20 @@ Everything here is public. Never upload cover letters, job-specific statements, 
 2. In this repository, go to **Settings**, then **Pages**, then **Custom domain**, type the domain, and click **Save**.
 3. At your registrar, add four **A records** for the main domain pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`. Add a **CNAME** record for `www` pointing to `nesman91.github.io`.
 4. Once the check turns green, tick **Enforce HTTPS**.
+
+## The "Work with me" assistant
+
+The button in the bottom-right corner opens a guided request assistant (`js/assistant.js`). It follows a fixed script
+for four services (research collaboration, the PICP Human-in-the-Loop survey, the FERPAI scale, workshops) and emails
+the visitor's answers to you.
+
+- **One-time activation:** requests are forwarded by FormSubmit. The first request ever sent triggers an activation
+  email from FormSubmit to your inbox. Open it and press **Activate**. Until then, visitors are offered a button that
+  opens their own email app with the request filled in.
+- **Change the address or the wording:** edit `EMAIL` and the `TOPICS` list at the top of `js/assistant.js`.
+
+## Motion and click-to-open sections
+
+- Visitors can stop all animation with **Pause motion** in the header; the site also follows the device's
+  reduced-motion setting.
+- Sections on the Research, Teaching, Design, and CV pages open and close when their heading is clicked.

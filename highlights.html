@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261110c">
+  <link rel="stylesheet" href="css/style.css?v=20261111a">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,10 @@
   <header class="site-header">
     <div class="wrap">
       <a class="site-name" href="index.html">Nesma R. Nasr</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-tools">
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -33,6 +36,7 @@
         </ul>
       </nav>
     </div>
+    <div class="progress" aria-hidden="true"></div>
   </header>
 
   <div class="shell">
@@ -343,11 +347,16 @@
   </div>
 
   <footer class="site-footer">
+    <div class="footer-cta">
+      <p>Interested in collaborating, or in using one of my instruments?</p>
+      <button class="button" type="button" data-assistant-open>Work with me</button>
+    </div>
     <div class="wrap">
       <span>&copy; <span data-year>2026</span> Nesma R. Nasr</span>
       <span>Last updated November 2026</span>
     </div>
   </footer>
-  <script src="js/site.js?v=20261110c"></script>
+  <script src="js/site.js?v=20261111a"></script>
+  <script src="js/assistant.js?v=20261111a"></script>
 </body>
 </html>

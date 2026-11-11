@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261110c">
+  <link rel="stylesheet" href="css/style.css?v=20261111a">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,10 @@
   <header class="site-header">
     <div class="wrap">
       <a class="site-name" href="index.html">Nesma R. Nasr</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="header-tools">
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -33,6 +36,7 @@
         </ul>
       </nav>
     </div>
+    <div class="progress" aria-hidden="true"></div>
   </header>
 
   <div class="shell">
@@ -56,8 +60,10 @@
       <h1>Research</h1>
       <p class="lede">Generative AI has entered classrooms and workplaces faster than the preparation of the people who teach and train in them. My research asks how educators, trainers, and learners can keep human judgment in the loop, and I pursue that question along three connected lines.</p>
 
-      <section id="critical-thinking" data-reveal>
-        <h2>Generative AI and critical thinking</h2>
+            <p class="acc-tools"><button type="button" data-acc="open">Open all sections</button><button type="button" data-acc="close">Close all sections</button></p>
+<details class="acc" id="critical-thinking" open data-reveal>
+        <summary><h2>Generative AI and critical thinking</h2></summary>
+        <div class="acc-body">
         <p>With colleagues, I conducted a bibliometric analysis and systematic review of research on GenAI and critical thinking in higher education, published in the <a href="https://doi.org/10.1007/s40692-026-00396-z"><em>Journal of Computers in Education</em></a> (2026). In a companion study in <a href="https://doi.org/10.3390/educsci15091198"><em>Education Sciences</em></a> (2025), I used the Practical Inquiry model of the Community of Inquiry framework to contrast passive, AI-directed use with human–AI supported collaboration. That article has been cited 171 times on Google Scholar, and its findings are available as an <a href="https://nesman91.github.io/GenAI-impact-on-Critical-Thinking-/">interactive research visualization</a>.</p>
       <div class="model model-hitl" id="res-hitl" data-interval="5500" style="--dur: 5500ms">
         <div class="model-figure">
@@ -197,10 +203,12 @@
           <figure class="photo"><img src="images/research/critical-thinking-1.jpg" alt="Nesma presenting research on GenAI and critical thinking" loading="lazy"><figcaption>Presenting GenAI and critical thinking research</figcaption></figure>
           <figure class="photo"><img src="images/research/critical-thinking-2.jpg" alt="Students using the critical AI inquiry model" loading="lazy"><figcaption>The critical AI inquiry model in use</figcaption></figure>
         </div>
-      </section>
+      </div>
+      </details>
 
-      <section id="ai-literacy" data-reveal>
-        <h2>Measuring multidimensional AI literacy</h2>
+      <details class="acc" id="ai-literacy" data-reveal>
+        <summary><h2>Measuring multidimensional AI literacy</h2></summary>
+        <div class="acc-body">
         <p>AI professional development is often designed without evidence of what educators already know. I developed the Functional, Ethical, Rhetorical, and Pedagogical AI Literacy Scale for Educators (FERPAI), grounded in digital multiliteracies theory and UNESCO’s AI Competency Framework for Teachers. In an initial validation with 239 preservice, K–12, and higher-education educators, the four subscales were reliable (α = .87–.93) and the refined model showed acceptable fit (CFI = .920, SRMR = .059).</p>
       <div class="model model-ferpai" id="res-ferpai" data-interval="6000" style="--dur: 6000ms">
         <div class="model-figure">
@@ -267,25 +275,31 @@
           <figure class="photo"><img src="images/research/ferpai-1.jpg" alt="Nesma presenting the FERPAI scale" loading="lazy"><figcaption>Presenting the FERPAI scale</figcaption></figure>
           <figure class="photo"><img src="images/research/ferpai-2.jpg" alt="A diagram of the four FERPAI literacy domains" loading="lazy"><figcaption>The four FERPAI literacy domains</figcaption></figure>
         </div>
-      </section>
+      </div>
+      </details>
 
-      <section id="professional-learning" data-reveal>
-        <h2>Designing AI-enhanced professional learning</h2>
+      <details class="acc" id="professional-learning" data-reveal>
+        <summary><h2>Designing AI-enhanced professional learning</h2></summary>
+        <div class="acc-body">
         <p>My dissertation, <em>GenAI Literacy for Language Teachers for a More Responsible and Effective Use of the Technology: Testing, Experiences, and Reflections</em>, is a sequential mixed-methods study of the <em>Teachers in the Loop</em> training. I designed it the way an instructional designer designs workplace training: a baseline needs assessment, then ten microlearning videos, narrated modules, and an avatar-based facilitator for asynchronous, low-bandwidth delivery. Teachers improved significantly on all four literacy dimensions (<a href="https://doi.org/10.59668/2579.26754"><em>Journal of Applied Instructional Design</em></a>, 2026). A companion study examines teachers’ engagement with synthetic presenters.</p>
         <!-- PHOTO SPACES: upload pictures with these exact file names. Empty spaces stay hidden. -->
         <div class="photo-row">
           <figure class="photo"><img src="images/highlights/teachers-loop-2025-1.jpg" alt="Educators during a Teachers in the Loop session" loading="lazy"><figcaption>Teachers in the Loop, 2025</figcaption></figure>
           <figure class="photo"><img src="images/research/avatar-facilitator-1.jpg" alt="The avatar-based facilitator from the training modules" loading="lazy"><figcaption>The avatar-based facilitator</figcaption></figure>
         </div>
-      </section>
+      </div>
+      </details>
 
-      <section data-reveal>
-        <h2>Related work</h2>
+      <details class="acc" data-reveal>
+        <summary><h2>Related work</h2></summary>
+        <div class="acc-body">
         <p>I have used narrative ethnography to examine an English learner’s language and inclusion (AERA, 2025) and narrative inquiry to study Grow Your Own teacher-program leaders in rural Arizona (AERA, 2024). As part of a research group at Northern Arizona University, I have also applied social network analysis to online learning communities, examining social presence and interaction patterns.</p>
-      </section>
+      </div>
+      </details>
 
-      <section id="grants" data-reveal>
-        <h2>Grants</h2>
+      <details class="acc" id="grants" data-reveal>
+        <summary><h2>Grants</h2></summary>
+        <div class="acc-body">
         <div class="grant">
           <h3>IGNITE-STEM: Intergenerational, Grounded, and Networked Innovation for Technology Education in STEM (Planning)</h3>
           <p class="meta">National Science Foundation, FINDERS Foundry. $49,613, August–December 2026. Current.</p>
@@ -306,10 +320,12 @@
           <p class="meta">National Science Foundation, STEM K–12, subaward from Magnolia Consulting. $314,424 to Northern Arizona University, March 2027–February 2030. Under review.</p>
           <p>Role: Artificial Intelligence Technologist. Design-based implementation research and a multi-site comparative study to co-design, evaluate, and disseminate an AI-enhanced professional learning framework for out-of-school-time STEM educators.</p>
         </div>
-      </section>
+      </div>
+      </details>
 
-      <section data-reveal>
-        <h2>Methods I use and teach</h2>
+      <details class="acc" data-reveal>
+        <summary><h2>Methods I use and teach</h2></summary>
+        <div class="acc-body">
         <ul>
           <li>Sequential mixed-methods designs</li>
           <li>Scale development, confirmatory factor analysis, and measurement invariance</li>
@@ -319,17 +335,24 @@
           <li>Thematic analysis, narrative inquiry, and narrative ethnography</li>
         </ul>
         <h2>Collaborate with me</h2>
-        <p>I welcome collaborations on AI literacy, professional learning design, and instrument validation. Email me at <a href="mailto:nrn55@nau.edu">nrn55@nau.edu</a>.</p>
-      </section>
+        <p>I welcome collaborations on AI literacy, professional learning design, and instrument validation. Email me at <a href="mailto:nrn55@nau.edu">nrn55@nau.edu</a>, or use the guided request.</p>
+        <p><button class="button" type="button" data-assistant-open="collab">Start a collaboration request</button></p>
+      </div>
+      </details>
     </main>
   </div>
 
   <footer class="site-footer">
+    <div class="footer-cta">
+      <p>Interested in collaborating, or in using one of my instruments?</p>
+      <button class="button" type="button" data-assistant-open>Work with me</button>
+    </div>
     <div class="wrap">
       <span>&copy; <span data-year>2026</span> Nesma R. Nasr</span>
       <span>Last updated November 2026</span>
     </div>
   </footer>
-  <script src="js/site.js?v=20261110c"></script>
+  <script src="js/site.js?v=20261111a"></script>
+  <script src="js/assistant.js?v=20261111a"></script>
 </body>
 </html>

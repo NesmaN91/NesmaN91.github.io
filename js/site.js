@@ -2,7 +2,24 @@
 // You do not need to edit this file.
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduce) document.documentElement.classList.add("motion");
+  const root = document.documentElement;
+  let motionOff = false;
+  try { motionOff = localStorage.getItem("motion") === "off"; } catch (e) { /* storage unavailable */ }
+  if (!reduce && !motionOff) root.classList.add("motion");
+  if (motionOff) root.classList.add("motion-off");
+
+  // ---- "Pause motion" switch in the header (hidden when the device already asks for reduced motion) ----
+  const motionBtn = document.querySelector(".motion-toggle");
+  if (motionBtn && !reduce) {
+    const paint = () => { const off = root.classList.contains("motion-off"); motionBtn.setAttribute("aria-pressed", off ? "true" : "false"); motionBtn.textContent = off ? "Play motion" : "Pause motion"; };
+    motionBtn.hidden = false; paint();
+    motionBtn.addEventListener("click", () => {
+      const off = !root.classList.contains("motion-off");
+      root.classList.toggle("motion-off", off); root.classList.toggle("motion", !off);
+      try { localStorage.setItem("motion", off ? "off" : "on"); } catch (e) { /* ignore */ }
+      paint();
+    });
+  }
 
   // ---- Photo-space view: add ?slots to any page address ----
   const showSlots = new URLSearchParams(location.search).has("slots");
@@ -103,7 +120,7 @@
       else go(strip.scrollLeft + o);
     };
     const prev = () => { const o = offsets().filter((x) => x < -4).pop(); go(o === undefined ? 0 : strip.scrollLeft + o); };
-    const start = () => { if (!reduce && !timer && loaded().length > 1) timer = setInterval(() => { if (!paused) next(); }, 4500); };
+    const start = () => { if (!reduce && !timer && loaded().length > 1) timer = setInterval(() => { if (!paused && !document.documentElement.classList.contains("motion-off")) next(); }, 4500); };
     stripSection.addEventListener("photo:loaded", () => { stripSection.hidden = false; start(); });
     if (strip.querySelector(".photo.loaded")) { stripSection.hidden = false; start(); }
     ["mouseenter", "focusin", "touchstart"].forEach((ev) => stripSection.addEventListener(ev, () => { paused = true; }, { passive: true }));
@@ -236,4 +253,38 @@
 
   // ---- Current year in the footer ----
   document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
+
+  // ---- Reading progress bar, back-to-top button ----
+  const bar = document.querySelector(".progress");
+  const top = document.createElement("button");
+  top.className = "to-top"; top.type = "button"; top.setAttribute("aria-label", "Back to top"); top.textContent = "\u2191";
+  document.body.appendChild(top);
+  top.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: root.classList.contains("motion") ? "smooth" : "auto" }); const m = document.getElementById("main"); if (m) { m.setAttribute("tabindex", "-1"); m.focus({ preventScroll: true }); } });
+  const onProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.setProperty("--p", max > 0 ? Math.min(1, window.scrollY / max).toFixed(4) : 0);
+    top.classList.toggle("show", window.scrollY > 700);
+  };
+  window.addEventListener("scroll", onProgress, { passive: true }); window.addEventListener("resize", onProgress); onProgress();
+
+  // ---- Soft light that follows the pointer on cards ----
+  document.querySelectorAll(".glow, .stats li, .acc > summary").forEach((el) => {
+    el.classList.add("glow");
+    el.addEventListener("pointermove", (e) => { const r = el.getBoundingClientRect(); el.style.setProperty("--mx", `${e.clientX - r.left}px`); el.style.setProperty("--my", `${e.clientY - r.top}px`); });
+  });
+
+  // ---- Click-to-open sections: open/close all, and open a section when a link points into it ----
+  document.querySelectorAll("[data-acc]").forEach((b) => b.addEventListener("click", () => {
+    document.querySelectorAll("main details.acc").forEach((d) => { d.open = b.dataset.acc === "open"; });
+  }));
+  const openForHash = () => {
+    if (location.hash.length < 2) return;
+    let el = null; try { el = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { return; }
+    if (!el) return;
+    let d = el.closest("details"); let changed = false;
+    while (d) { if (!d.open) { d.open = true; changed = true; } d = d.parentElement && d.parentElement.closest("details"); }
+    if (changed) el.scrollIntoView();
+  };
+  window.addEventListener("hashchange", openForHash); openForHash();
+  window.addEventListener("beforeprint", () => document.querySelectorAll("details.acc").forEach((d) => { d.open = true; }));
 })();
