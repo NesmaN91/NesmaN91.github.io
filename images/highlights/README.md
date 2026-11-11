@@ -57,6 +57,8 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `aiitec-1.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
 - `aiitec-2.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
 - `teachers-loop-2025-4.jpg`: Highlights: Teachers in the Loop series
+- `teachers-loop-2025-5.jpg`: Highlights: Teachers in the Loop series
+- `teachers-loop-2025-6.jpg`: Highlights: Teachers in the Loop series
 - `aztesol-2025-1.jpg`: Highlights: AZTESOL virtual professional development
 - `pedaigogy-2026-1.jpg`: Highlights: Reimagining PedAIgogy Incubator Series
 - `basis-2025-1.jpg`: Highlights: Think Like a Scientist, BASIS Flagstaff
