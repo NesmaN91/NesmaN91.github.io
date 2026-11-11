@@ -45,6 +45,11 @@
         { key: "event", q: "What is the event, who is the audience, and is it online or in person?", label: "Event and audience" },
         { key: "date", q: "What date or time frame do you have in mind? (Type “skip” if not set.)", label: "Date", optional: true }],
     },
+    cv: {
+      label: "Request Nesma’s CV", subject: "CV request",
+      intro: "Nesma shares her CV on request. I will ask three short questions and she will reply by email.",
+      fields: ["name", "email", { key: "reason", q: "Where do you work or study, and why would you like her CV?", label: "Institution and reason" }],
+    },
     other: {
       label: "Something else", subject: "Message from your website",
       intro: "Of course. I will take a short message for Nesma.",
@@ -52,11 +57,11 @@
     },
   };
   const QUICK = [
+    [/\bcv\b|resume|résumé|curriculum vitae/i, "cv"],
     [/ferpai|\bscale\b/i, "ferpai"], [/picp|survey|human.?in.?the.?loop|questionnaire/i, "picp"],
     [/collab|co-?author|grant|partner|research with/i, "collab"], [/workshop|talk|speak|keynote|training|\bpd\b|webinar/i, "workshop"],
   ];
   const LINKS = [
-    [/\bcv\b|resume|résumé/i, "You can download Nesma’s CV here: ", "files/Nasr_Nesma_CV.pdf", "CV (PDF)"],
     [/publication|paper|article|cite/i, "Her articles and presentations are listed here: ", "publications.html", "Publications"],
     [/video|recording|youtube/i, "Workshop recordings are linked from this page: ", "design.html", "Design & PD"],
     [/teach|course/i, "Her courses and student feedback are here: ", "teaching.html", "Teaching"],

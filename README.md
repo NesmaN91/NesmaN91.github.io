@@ -12,11 +12,9 @@ Live at **https://nesman91.github.io**. The site is plain HTML, so GitHub Pages 
 | `teaching.html` | Teaching approach, courses, survey results, student quotes (with photo spaces) |
 | `design.html` | Teachers in the Loop, course design, workshops, YouTube playlist (with photo spaces) |
 | `highlights.html` | Honors and celebrations, AERA, AECT, grants and community, workshops and teaching |
-| `cv.html` | CV summary and download button |
 | `css/style.css` | Colors, fonts, layout, and motion |
 | `js/site.js` | Menu, photo spaces, motion, lightbox, and filters (no need to edit) |
 | `images/` | Photos, organized in `highlights/`, `research/`, and `teaching/` |
-| `files/Nasr_Nesma_CV.pdf` | Public CV (no phone number, no disclosure section) |
 
 ---
 
@@ -184,11 +182,9 @@ To add a news item, paste this at the top of the News list in `index.html`:
 
 To update the citation count, search the pages for `171` and change the number.
 
-## Update the CV
+## Your CV is not on the site
 
-1. Save your CV from Word as a PDF.
-2. Remove your phone number and the disclosure section.
-3. Name it `Nasr_Nesma_CV.pdf` and upload it to the `files` folder.
+The CV is private. Visitors can ask for it with the **Request my CV** button, and the request arrives in your email. Do not upload the CV to this repository.
 
 ## Keep the repository safe
 
