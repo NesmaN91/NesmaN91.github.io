@@ -530,17 +530,17 @@ html:not(.motion) .ticker-track { flex-wrap: wrap; width: auto; } html:not(.moti
 @keyframes jpulse { 0%, 100% { transform: scale(1); opacity: .9; } 50% { transform: scale(1.14); opacity: .35; } }
 @keyframes jbob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
 @media (prefers-color-scheme: dark) { .model-journey .model-figure { background: #F7F8FA; border-radius: 12px; padding: 6px; } .model-journey .j-label { fill: #1B2333; } .model-journey .j-disc { fill: #FFFFFF; } .model-journey .j-path { stroke: #C9D2DC; } }
-/* ---------- Sphinx on the "Ask Nesma" button ---------- */
-.assist-launch svg.sphinx { width: 36px; height: 30px; }
-.assist header .sphinx { width: 40px; height: 33px; flex: none; }
-.sphinx .sx-head, .sphinx .sx-tail, .sphinx .sx-eyes { transform-box: fill-box; }
-.sphinx .sx-head { transform-origin: 50% 100%; } .sphinx .sx-tail { transform-origin: 0% 100%; } .sphinx .sx-eyes { transform-origin: center; }
+/* ---------- The three pyramids on the "Ask Nesma" button ---------- */
+.assist-launch svg.pyramids { width: 42px; height: 30px; }
+.assist header .pyramids { width: 46px; height: 33px; flex: none; }
+.pyramids .py-sun, .pyramids .py-glow, .pyramids .py-p { transform-box: fill-box; transform-origin: center; }
+.pyramids .py-p { transform-origin: 50% 100%; }
 @media (prefers-reduced-motion: no-preference) {
-  .motion .sphinx .sx-head { animation: sxnod 5s ease-in-out infinite; }
-  .motion .sphinx .sx-tail { animation: sxtail 2.6s ease-in-out infinite; }
-  .motion .sphinx .sx-eyes { animation: sxblink 4.2s infinite; }
-  .motion .assist-launch:hover .sphinx .sx-head { animation-duration: 1.2s; }
+  .motion .pyramids .py-sun { animation: pysun 6s ease-in-out infinite; }
+  .motion .pyramids .py-glow { animation: pyglow 2.4s ease-out infinite; }
+  .motion .assist-launch:hover .pyramids .py-p { animation: pyrise .6s var(--ease) backwards; }
+  .motion .assist-launch:hover .pyramids .py-p2 { animation-delay: .08s; } .motion .assist-launch:hover .pyramids .py-p3 { animation-delay: .16s; }
 }
-@keyframes sxnod { 0%, 60%, 100% { transform: rotate(0); } 70% { transform: rotate(-7deg); } 85% { transform: rotate(5deg); } }
-@keyframes sxtail { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(16deg); } }
-@keyframes sxblink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+@keyframes pysun { 0%, 100% { transform: translateY(5px); } 50% { transform: translateY(-2px); } }
+@keyframes pyglow { 0% { transform: scale(.7); opacity: .7; } 100% { transform: scale(1.35); opacity: 0; } }
+@keyframes pyrise { from { transform: scaleY(.2); opacity: .3; } }
