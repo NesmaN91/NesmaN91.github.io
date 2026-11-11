@@ -1,4 +1,4 @@
-// "Work with me" assistant: a guided request helper that emails Nesma.
+// "Ask Nesma" assistant: a guided request helper that emails Nesma.
 // It follows a fixed script. It is not an AI and it does not answer as Nesma.
 //
 // HOW REQUESTS REACH YOUR INBOX
@@ -71,19 +71,20 @@
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
   const launch = el("button", "assist-launch"); launch.type = "button";
   launch.setAttribute("aria-expanded", "false"); launch.setAttribute("aria-controls", "assist-panel");
-  launch.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg><span class="label">Work with me</span><span class="ping" aria-hidden="true"></span>';
-  if (!launch.querySelector(".label")) launch.textContent = "Work with me";
-  launch.setAttribute("aria-label", "Work with me: open the guided request assistant");
+  const SPHINX = '<svg class="sphinx" viewBox="0 0 48 40" aria-hidden="true"><path class="sx-tail" d="M39 31 c6 0 7-6 3.5-9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M17 35 V23 c7-4 16-2.5 20 3 c2 2.7 3 5.5 3 9 z" fill="#fff"/><rect x="6" y="30.5" width="20" height="4.6" rx="2.3" fill="#fff"/><path d="M26 35 v-4 a3 3 0 0 1 6 0 v4" fill="none" stroke="#0E6F6B" stroke-width="1.2" opacity=".5"/><g class="sx-head"><path d="M9.5 25 L11.5 9 Q17 2.5 22.5 9 L25.5 25 Z" fill="#F5C76B"/><path d="M11 13.5 h12.5 M10.4 17.5 h13.8 M9.9 21.5 h14.9" stroke="#0E6F6B" stroke-width="1.3" opacity=".75"/><path d="M12.3 10 q4.7-4.6 9.4 0 v9.5 q-4.7 4.5-9.4 0 z" fill="#fff"/><rect x="15.4" y="21.5" width="3.2" height="5" rx="1.2" fill="#F5C76B"/><g class="sx-eyes" fill="#1B2333"><ellipse cx="14.9" cy="14" rx="1.1" ry="1.4"/><ellipse cx="19.1" cy="14" rx="1.1" ry="1.4"/></g><path d="M15.3 17.6 q1.7 1.3 3.4 0" fill="none" stroke="#1B2333" stroke-width="1" stroke-linecap="round"/><circle cx="17" cy="6.3" r="1.3" fill="#fff"/></g></svg>';
+  launch.innerHTML = SPHINX + '<span class="label">Ask Nesma</span><span class="ping" aria-hidden="true"></span>';
+  launch.setAttribute("aria-label", "Ask Nesma: open the guided request assistant");
 
   const panel = el("section", "assist"); panel.id = "assist-panel"; panel.hidden = true;
   panel.setAttribute("role", "dialog"); panel.setAttribute("aria-labelledby", "assist-title");
   const head = el("header"); const titles = el("div");
-  const h = el("h2", "", "Work with Nesma"); h.id = "assist-title";
+  const h = el("h2", "", "Ask Nesma"); h.id = "assist-title";
   titles.append(h, el("p", "", "Guided request assistant"));
+  const brand = el("div"); brand.style.cssText = "display:flex;align-items:center;gap:10px"; brand.innerHTML = SPHINX; brand.append(titles);
   const tools = el("div"); tools.style.cssText = "display:flex;gap:6px";
   const restartBtn = el("button", "", "Start over"); restartBtn.type = "button";
   const closeBtn = el("button", "", "Close"); closeBtn.type = "button";
-  tools.append(restartBtn, closeBtn); head.append(titles, tools);
+  tools.append(restartBtn, closeBtn); head.append(brand, tools);
   const log = el("div", "assist-log"); log.setAttribute("role", "log"); log.setAttribute("aria-live", "polite"); log.tabIndex = 0; log.setAttribute("aria-label", "Conversation");
   const form = el("form"); form.noValidate = true;
   const inputLabel = el("label", "vh", "Your answer"); inputLabel.htmlFor = "assist-input";

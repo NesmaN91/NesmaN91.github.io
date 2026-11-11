@@ -178,6 +178,8 @@
       buttons.forEach((b, k) => { b.setAttribute("aria-selected", k === i ? "true" : "false"); b.tabIndex = k === i ? 0 : -1; });
       details.forEach((d, k) => { d.hidden = k !== i; });
       parts.forEach((p) => p.classList.toggle("is-active", Number(p.dataset.step) === i));
+      const stop = model.querySelector(`svg [data-step="${i}"][data-at]`);   // path models: move the traveler along the path
+      if (stop) { model.style.setProperty("--at", stop.dataset.at); parts.forEach((p) => p.classList.toggle("is-past", Number(p.dataset.step) < i)); }
       if (tracer) {
         const node = model.querySelector(`svg [data-step="${i}"][data-angle]`);
         const a = node ? Number(node.dataset.angle) : 0;
