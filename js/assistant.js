@@ -7,7 +7,7 @@
 // If the relay ever fails, the visitor gets a button that opens their own email app with the request filled in.
 // To change the address, edit EMAIL. To turn the relay off and always use the visitor's email app, set RELAY to "".
 (function () {
-  const EMAIL = "nrn55@nau.edu";
+  const EMAIL = "nesmanagar15@gmail.com";
   const RELAY = "https://formsubmit.co/ajax/" + EMAIL;
 
   // ---- The script: topics, what the guide says, and the questions it asks ----
