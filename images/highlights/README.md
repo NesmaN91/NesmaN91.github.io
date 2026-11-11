@@ -7,19 +7,23 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `outstanding-phd-2025-1.jpg`: Home carousel (also on Highlights); Highlights: Outstanding Doctoral Student, Curriculum and Instruction
 - `aect-led-award-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AECT Learner Engagement Division professional development award; Highlights: AECT 2026
 - `aera-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AERA 2026; Highlights: AERA Graduate Student Council
-- `aect-2026-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2026
+- `aect-2026-1.jpg`: Home carousel (also on Highlights); Design page: workshops (also on Highlights); Highlights: AECT 2026
 - `aera-gsc-1.jpg`: Home carousel (also on Highlights); Highlights: AERA Graduate Student Council
 - `teaching-nau-2.jpg`: Home carousel (also on Highlights); Teaching page; Highlights: Teaching at Northern Arizona University
 - `aztesol-board-1.jpg`: Home carousel (also on Highlights); Highlights: Member at Large, AZTESOL Board
-- `ignite-2026-1.jpg`: Home carousel (also on Highlights); Research: grants (IGNITE-STEM); Highlights: IGNITE-STEM co-design workshop
+- `ignite-2026-1.jpg`: Home carousel (also on Highlights); Research: grants (IGNITE-STEM); Design page: workshops (also on Highlights); Highlights: IGNITE-STEM co-design workshop
 - `aect-2025-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2025
-- `teachers-loop-2025-1.jpg`: Home carousel (also on Highlights); Research: professional learning; Highlights: Teachers in the Loop series
+- `teachers-loop-2025-1.jpg`: Home carousel (also on Highlights); Research: professional learning; Design page: Teachers in the Loop (also on Highlights); Design page: workshops (also on Highlights); Highlights: Teachers in the Loop series
 - `aera-2025-1.jpg`: Home carousel (also on Highlights); Highlights: AERA 2025
 - `aect-2024-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2024
 - `aera-2024-1.jpg`: Home carousel (also on Highlights); Highlights: AERA 2024
 - `aect-2023-1.jpg`: Home carousel (also on Highlights); Highlights: AECT 2023
 - `teachers-loop-2025-2.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
 - `teachers-loop-2025-3.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
+- `teachers-loop-2025-4.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
+- `teachers-loop-2025-5.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
+- `teachers-loop-2025-6.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
+- `teachers-loop-2025-7.jpg`: Design page: Teachers in the Loop (also on Highlights); Highlights: Teachers in the Loop series
 - `keynote-2024-2.jpg`: Highlights: Student keynote speaker, 2024 Internationally Connected Faculty Reception
 - `keynote-2024-3.jpg`: Highlights: Student keynote speaker, 2024 Internationally Connected Faculty Reception
 - `keynote-2024-4.jpg`: Highlights: Student keynote speaker, 2024 Internationally Connected Faculty Reception
@@ -56,9 +60,6 @@ Upload pictures here with these exact file names (lowercase, .jpg). A photo appe
 - `aztesol-board-2.jpg`: Highlights: Member at Large, AZTESOL Board
 - `aiitec-1.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
 - `aiitec-2.jpg`: Highlights: American Indian/Indigenous Teacher Education Conference
-- `teachers-loop-2025-4.jpg`: Highlights: Teachers in the Loop series
-- `teachers-loop-2025-5.jpg`: Highlights: Teachers in the Loop series
-- `teachers-loop-2025-6.jpg`: Highlights: Teachers in the Loop series
 - `aztesol-2025-1.jpg`: Highlights: AZTESOL virtual professional development
 - `pedaigogy-2026-1.jpg`: Highlights: Reimagining PedAIgogy Incubator Series
 - `basis-2025-1.jpg`: Highlights: Think Like a Scientist, BASIS Flagstaff
