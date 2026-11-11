@@ -155,8 +155,9 @@
     const t = TOPICS[state.topic];
     return "mailto:" + EMAIL + "?subject=" + encodeURIComponent(t.subject) + "&body=" + encodeURIComponent(t.label + "\n\n" + body() + "\n\nSent from nesman91.github.io");
   }
-  function fallback() {
-    bot(["I could not send that automatically. Please send it from your own email instead: ", { href: mailto(), label: "open my email app with the request filled in" }, ". You can also write to " + EMAIL + "."], () => {
+  function fallback(why) {
+    const lead = /activ/i.test(why || "") ? "Automatic sending is waiting for a one-time activation of Nesma’s inbox, so I could not send that yet. " : "I could not send that automatically. ";
+    bot([lead + "Please send it from your own email instead: ", { href: mailto(), label: "open my email app with the request filled in" }, ". You can also write to " + EMAIL + "."], () => {
       choices([["Start another request", () => menu(false)]]);
     });
   }
@@ -178,7 +179,7 @@
         if (ok && String(j.success) === "true") {
           lastSend = Date.now();
           bot("Sent. Nesma has your request and will reply to " + d.email + ". Thank you for your interest in her work.", () => choices([["Start another request", () => menu(false)], ["Close", close]]));
-        } else fallback();
+        } else fallback(j && j.message);
       })
       .catch(() => { clearTimeout(timer); fallback(); });
   }
